@@ -37,7 +37,7 @@ function TracklistSong({
   //----------------------------------------------
 
   return (
-    <div className="tracklist-song-container">
+    <div className="tracklist-song-container" onClick={songSelectHandler}>
       <img className="tracklist-cover-img" src={song.cover} alt={song.name} />
       <div className="tracklist-song-desc">
         <h3 className="tracklist-song-name">{song.name}</h3>

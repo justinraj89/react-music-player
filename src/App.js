@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 // Components -
 import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
 import Song from "./components/SongDetail/SongDetail";
-import Nav from './components/Nav/Nav';
+import Nav from "./components/Nav/Nav";
 import Tracklist from "./components/Tracklist/Tracklist";
 //===================================
 import songData from "./songData";
@@ -23,15 +23,15 @@ function App() {
   });
 
   const updateTimeHandler = (e) => {
-		const currentTime = e.target.currentTime;
-		const duration = e.target.duration;
-		setSongLength({ ...songLength, currentTime, duration });
-	};
+    const currentTime = e.target.currentTime;
+    const duration = e.target.duration;
+    setSongLength({ ...songLength, currentTime, duration });
+  };
 
   return (
     <div>
-      <Nav libraryOpen={libraryOpen} setLibraryOpen={setLibraryOpen}/>
-      <Song currentSong={currentSong}/>
+      <Nav libraryOpen={libraryOpen} setLibraryOpen={setLibraryOpen} />
+      <Song currentSong={currentSong} />
       <MusicPlayer
         isPlaying={isPlaying}
         setIsPlaying={setIsPlaying}
@@ -43,14 +43,21 @@ function App() {
         songs={songs}
         setSongs={setSongs}
       />
-      <Tracklist />
+      <Tracklist
+        songs={songs}
+        setCurrentSong={setCurrentSong}
+        audioRef={audioRef}
+        isPlaying={isPlaying}
+        setSongs={setSongs}
+        libraryOpen={libraryOpen}
+      />
       <audio
-				onLoadedMetadata={updateTimeHandler}
-				onTimeUpdate={updateTimeHandler}
-				// onEnded={songEndHandler}
-				ref={audioRef}
-				src={currentSong.audio}
-			/>
+        onLoadedMetadata={updateTimeHandler}
+        onTimeUpdate={updateTimeHandler}
+        // onEnded={songEndHandler}
+        ref={audioRef}
+        src={currentSong.audio}
+      />
     </div>
   );
 }

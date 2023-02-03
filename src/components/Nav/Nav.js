@@ -1,10 +1,10 @@
 import './Nav.css'
 //===================
 
-function Nav() {
+function Nav({libraryOpen, setLibraryOpen}) {
   return (
     <div className='nav-container'>
-        <button className='tracks-btn'>Tracks</button>
+        <button onClick={() => setLibraryOpen(!libraryOpen)} className='tracks-btn'>Tracks</button>
     </div>
   )
 }
