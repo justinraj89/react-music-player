@@ -1,0 +1,47 @@
+.music-player-container {
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.time-control-container {
+  margin-top: 5vh;
+  width: 50%;
+  display: flex;
+}
+
+.song-time {
+  padding: 0 1rem 0 1rem;
+  user-select: none;
+}
+
+.track {
+  background: rgb(170, 170, 170);
+  width: 100%;
+  height: 1rem;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.slider {
+  width: 100%;
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.slider:focus {
+  outline: none;
+  -webkit-appearance: none;
+}
+
+@media screen and (max-width: 768px) {
+  .time-control-container {
+    width: 90%;
+  }
+  .slider {
+  }
+}
