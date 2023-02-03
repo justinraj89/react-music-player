@@ -7,7 +7,7 @@
 }
 
 .time-control-container {
-  margin-top: 8vh;
+  margin-top: 6vh;
   width: 50%;
   display: flex;
 }
@@ -24,13 +24,23 @@
   position: relative;
   border-radius: 1rem;
   overflow: hidden;
+  background: lightblue
 }
 
 .slider {
   width: 100%;
   -webkit-appearance: none;
+  border: none;
   background: transparent;
   cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  background: transparent;
+  border: none;
 }
 
 .slider:focus {

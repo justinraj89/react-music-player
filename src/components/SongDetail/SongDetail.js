@@ -1,4 +1,4 @@
-import './Song.css'
+import './SongDetail.css'
 //======================
 
 function Song({currentSong}) {
