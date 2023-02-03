@@ -1,10 +1,15 @@
-// MUI ICONS
-import PauseIcon from "@mui/icons-material/Pause";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import SkipNextIcon from "@mui/icons-material/SkipNext";
-import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faAngleLeft,
+  faAngleRight,
+  faPlay,
+  faPause,
+} from "@fortawesome/free-solid-svg-icons";
 //-------------------------------
+import styled from "styled-components";
 import "./MusicPlayer.css";
+//===============================
+const pointer = { cursor: "pointer" };
 //===============================
 
 function MusicPlayer({
@@ -18,7 +23,6 @@ function MusicPlayer({
   songs,
   setSongs,
 }) {
-
   //==== Functions
   const playSongHandler = () => {
     if (isPlaying) {
@@ -32,9 +36,9 @@ function MusicPlayer({
   //--------------------------------
   const togglePlayPauseIcon = () => {
     if (isPlaying) {
-      return PauseIcon;
+      return faPause;
     } else {
-      return PlayArrowIcon;
+      return faPlay;
     }
   };
   //---------------------------------
@@ -85,15 +89,63 @@ function MusicPlayer({
     setSongs(newSongs);
   };
 
+  // CUSTOM COMPONENT (styled-components)
+  const AnimateTrack = styled.div`
+    background: rgb(204, 204, 204);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(
+      ${(p) =>
+        Math.round((p.songLength.currentTime * 100) / p.songLength.duration) +
+        "%"}
+    );
+    pointer-events: none;
+  `;
+
   //==========================================================
 
   return (
     <div className="music-player-container">
       <div className="time-control-container">
         <p className="song-time">{getTime(songLength.currentTime || 0)}</p>
-		<div className="track">
-			<input className='slider' type="text" />
-		</div>
+        <div className="track">
+          <input
+            className="slider"
+            type="range"
+            onChange={dragHandler}
+            min={0}
+            max={songLength.duration || 0}
+            value={songLength.currentTime}
+          />
+          <AnimateTrack songLength={songLength} />
+        </div>
+        <p className="song-time">{getTime(songLength.duration || 0)}</p>
+      </div>
+      <div className="play-controls-container">
+        <FontAwesomeIcon
+          onClick={() => skipTrackHandler("skip-back")}
+          className="skip-back"
+          icon={faAngleLeft}
+          size="2x"
+          style={pointer}
+        />
+        <FontAwesomeIcon
+          onClick={playSongHandler}
+          className="play"
+          icon={togglePlayPauseIcon()}
+          size="2x"
+          style={pointer}
+        />
+        <FontAwesomeIcon
+          onClick={() => skipTrackHandler("skip-forward")}
+          className="skip-forward"
+          icon={faAngleRight}
+          size="2x"
+          style={pointer}
+        />
       </div>
     </div>
   );
