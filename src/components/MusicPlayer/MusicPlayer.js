@@ -89,21 +89,7 @@ function MusicPlayer({
     setSongs(newSongs);
   };
 
-  // CUSTOM COMPONENT (styled-components)
-  const AnimateTrack = styled.div`
-    background: rgb(204, 204, 204);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateX(
-      ${(p) =>
-        Math.round((p.songLength.currentTime * 100) / p.songLength.duration) +
-        "%"}
-    );
-    pointer-events: none;
-  `;
+
 
   //==========================================================
 
@@ -151,4 +137,24 @@ function MusicPlayer({
   );
 }
 
+
+  // CUSTOM COMPONENT (styled-components)
+  const AnimateTrack = styled.div`
+    background: rgb(204, 204, 204);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(
+      ${(p) =>
+        Math.round((p.songLength.currentTime * 100) / p.songLength.duration) +
+        "%"}
+    );
+    pointer-events: none;
+  `;
+
+
 export default MusicPlayer;
+
+

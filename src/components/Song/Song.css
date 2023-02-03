@@ -1,0 +1,26 @@
+.song-detail-container {
+  margin-top: 10vh;
+  min-height: 50vh;
+  max-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.album-art {
+  width: 30%;
+}
+
+.song-name-text {
+  padding: 3rem 1rem 1rem 1rem;
+}
+
+.song-artist-text {
+}
+
+@media screen and (max-width: 768px) {
+  .album-art {
+    width: 70%;
+  }
+}
