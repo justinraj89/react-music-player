@@ -89,8 +89,6 @@ function MusicPlayer({
     setSongs(newSongs);
   };
 
-
-
   //==========================================================
 
   return (
@@ -117,6 +115,7 @@ function MusicPlayer({
           icon={faAngleLeft}
           size="2x"
           style={pointer}
+          color='white'
         />
         <FontAwesomeIcon
           onClick={playSongHandler}
@@ -124,6 +123,7 @@ function MusicPlayer({
           icon={togglePlayPauseIcon()}
           size="2x"
           style={pointer}
+          color='white'
         />
         <FontAwesomeIcon
           onClick={() => skipTrackHandler("skip-forward")}
@@ -131,6 +131,7 @@ function MusicPlayer({
           icon={faAngleRight}
           size="2x"
           style={pointer}
+          color='white'
         />
       </div>
     </div>

@@ -29,7 +29,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="app-container">
       <Nav libraryOpen={libraryOpen} setLibraryOpen={setLibraryOpen} />
       <Song currentSong={currentSong} />
       <MusicPlayer
@@ -54,7 +54,6 @@ function App() {
       <audio
         onLoadedMetadata={updateTimeHandler}
         onTimeUpdate={updateTimeHandler}
-        // onEnded={songEndHandler}
         ref={audioRef}
         src={currentSong.audio}
       />

@@ -1,12 +1,13 @@
 .nav-container {
   min-height: 5vh;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: flex-end;
+  padding-top: 10px;
+  width: 70%;
 }
 
 .tracks-btn {
-  background: transparent;
+  background: white;
   border: none;
   cursor: pointer;
   border: 2px solid rgb(65, 65, 65);
@@ -25,6 +26,6 @@
     z-index: 10;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 70%;
   }
 }
