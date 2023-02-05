@@ -1,6 +1,5 @@
 * {
-	padding: 0;
-	margin: 0;
+	margin: 0 auto;
 	box-sizing: border-box;
 }
 body {
@@ -18,5 +17,9 @@ h3,
 h4 {
 	font-weight: 400;
 	color: white
+}
+
+.app-container {
+	padding-top: 60px;
 }
 

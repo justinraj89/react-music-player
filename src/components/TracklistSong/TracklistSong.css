@@ -7,7 +7,7 @@
 }
 
 .tracklist-song-container:hover {
-  background-color: lightblue;
+  background-color:rgb(170, 150, 252);
   transition: all 0.3s ease;
 }
 
