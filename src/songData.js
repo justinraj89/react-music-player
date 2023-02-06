@@ -32,6 +32,15 @@ function songData() {
 			active: true,
 		},
 		{
+			name: "Droopy",
+			cover:
+				"https://i.imgur.com/PABKHBW.png",
+			artist: "Justin",
+			audio: "https://catcollector100.s3.us-west-1.amazonaws.com/droopMP3.mp3",
+			id: uuidv4(),
+			active: true,
+		},
+		{
 			name: "Bounce",
 			cover:
 				"https://i.imgur.com/zwxRJ3I.png",

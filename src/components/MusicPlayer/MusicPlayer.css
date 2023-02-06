@@ -58,6 +58,18 @@
   width: 30%;
 }
 
+.skip-forward:hover {
+  color: rgb(170, 150, 252);
+}
+
+.play:hover {
+  color: rgb(170, 150, 252);
+}
+
+.skip-back:hover {
+  color: rgb(170, 150, 252);
+}
+
 @media screen and (max-width: 768px) {
   .time-control-container {
     width: 90%;
@@ -95,5 +107,17 @@
   }
   .play-controls-container {
     width: 60%;
+  }
+
+  .skip-forward:hover {
+    color:white;
+  }
+
+  .skip-back:hover {
+    color:white;
+  }
+
+  .play:hover {
+    color:white
   }
 }
