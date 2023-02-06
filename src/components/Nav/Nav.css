@@ -1,29 +1,28 @@
 .nav-container {
   min-height: 5vh;
   display: flex;
-
   width: 70%;
 }
 
 .tracks-btn {
-  background: white;
+  background: rgb(65, 65, 65);
   border: none;
+  color: white;
   cursor: pointer;
-  border: 2px solid rgb(65, 65, 65);
   padding: 0.5rem;
   transition: all 0.3s ease;
   margin-right: 52px;
 }
 
 .tracks-btn:hover {
-  background: rgb(65, 65, 65);
+  background: rgb(86, 86, 86);
   color: white;
 }
 
 @media screen and (max-width: 768px) {
   .nav-container {
     position: fixed;
-    padding-top: 25px;
+    padding-top: 45px;
     z-index: 10;
     top: 0;
     left: 0;
