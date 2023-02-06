@@ -37,7 +37,7 @@ const LibraryContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  width: 30rem;
+  width: 20rem;
   height: 100%;
   background-color: black;
   user-select: none;
