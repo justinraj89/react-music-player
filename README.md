@@ -13,7 +13,7 @@ Link to deployed Application [here](https://music-player-reactjs.herokuapp.com/)
 <img src="https://media.giphy.com/media/gwN7zxVl72vzUFi3Vf/giphy.gif" width="800" >
 
 ## Mobile View
-<img src="https://media.giphy.com/media/fJL6HDH7egfVwxYe3S/giphy.gif" width="800" >
+<img src="https://media.giphy.com/media/fJL6HDH7egfVwxYe3S/giphy.gif" width="400" >
 
 
 
