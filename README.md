@@ -2,7 +2,7 @@
 
 
 ## Music Player developed using React JS.
-
+Music player application.
 
 
 ### Link to deployed Application [here](https://music-player-reactjs.herokuapp.com/)
